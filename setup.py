@@ -13,7 +13,7 @@ setup(name='dblpy',
       description='A simple API wrapper for sending emails with Gmail',
       long_description=readme,
       keywords='gmail email',
-      download_url = 'https://github.com/iDutchy/gmailpy/archive/v1.0.tar.gz',
+      download_url = 'https://github.com/iDutchy/gmailpy/archive/1.0.tar.gz',
       classifiers=[
           'Development Status :: 5 - Production/Stable',
           'License :: OSI Approved :: MIT License',
