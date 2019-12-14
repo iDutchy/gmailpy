@@ -15,7 +15,7 @@ class Client:
         self.password = password
         
         
-    async def send(self, receiver, subject=None, bcc=None, attachment_bytes=None, attachment_name=None):
+    async def send(self, receiver, body, subject=None, bcc=None, attachment_bytes=None, attachment_name=None):
         sender_email = self.mail
         password = self.password
 
@@ -25,7 +25,7 @@ class Client:
         message["Subject"] = subject if subject else "No subject"
         message["Bcc"] = bcc
 
-        message.attach(MIMEText(body.content, "plain"))
+        message.attach(MIMEText(body, "plain"))
         
         if attachment_name is None and attachment_bytes is not None:
             raise Error('You did not provide an attachment name for your attachment!')
