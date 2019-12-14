@@ -3,7 +3,7 @@ from setuptools import setup
 with open('README.rst') as f:
     readme = f.read()
 
-setup(name='dblpy',
+setup(name='gmailpy',
       author='Niels Steenman',
       author_email='ngssteenman@gmail.com',
       url='https://github.com/iDutchy/gmailpy',
