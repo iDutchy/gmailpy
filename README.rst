@@ -16,7 +16,7 @@ Install from source
 
 .. code:: bash
 
-    pip install git+https://github.com/DiscordBotList/DBL-Python-Library
+    pip install git+https://github.com/iDutchy/gmailpy
     
 Usage
 -----
