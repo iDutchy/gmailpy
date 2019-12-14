@@ -28,10 +28,8 @@ First you need to create your client:
     import gmailpy
     
     client = gmailpy.Client("john.doe@gmail.com", "P@$$w0rd")
-    
-After that, use the `send` attribute
 
-***await* client.send(receiver, content, subject=None, bcc=None, attachment_bytes=None, attachment_name=None)**
+** *await* client.send(receiver, content, subject=None, bcc=None, attachment_bytes=None, attachment_name=None)**
 
 * **Parameters:**
     * reveiver (string): The receivers email address
