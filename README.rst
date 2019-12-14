@@ -18,8 +18,8 @@ Install from source
 
     pip install git+https://github.com/iDutchy/gmailpy
     
-Usage
------
+Getting Started
+---------------
 
 First you need to create your client:
 
@@ -29,7 +29,8 @@ First you need to create your client:
     
     client = gmailpy.Client("john.doe@gmail.com", "P@$$w0rd")
 
-
+Usage
+-----
 
 await client.send(receiver, content, subject=None, bcc=None, attachment_bytes=None, attachment_name=None)
 #########################################################################################################
