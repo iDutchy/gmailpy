@@ -32,7 +32,8 @@ First you need to create your client:
 
 
 await client.send(receiver, content, subject=None, bcc=None, attachment_bytes=None, attachment_name=None)
-“““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““““
+#########################################################################################################
+---------------------------------------------------------------------------------------------------------
 
 * **Parameters:**
     * reveiver (string): The receivers email address
