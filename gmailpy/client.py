@@ -15,7 +15,7 @@ class Client:
         self.password = password
         
         
-    async def send(self, receiver, body, subject=None, bcc=None, attachment_bytes=None, attachment_name=None):
+    def send(self, receiver, body, subject=None, bcc=None, attachment_bytes=None, attachment_name=None):
         sender_email = self.mail
         password = self.password
 
