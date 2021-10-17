@@ -1,5 +1,7 @@
 import smtplib
 import ssl
+import asyncio
+import functools
 
 from email import encoders
 from email.mime.base import MIMEBase
@@ -52,3 +54,8 @@ class Client:
         with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver, text)
+
+        async def send_async(self, receiver, body, subject=None, bcc=None, attachment_bytes=None, attachment_name=None):
+            loop = asyncio.get_event_loop()
+            sync_send = functools.partial(send, receiver, body, subject, bcc, attachment_bytes, attachment_name)
+            return await loop.run_in_executor(None, sync_send)
