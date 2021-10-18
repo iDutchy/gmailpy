@@ -1,5 +1,4 @@
 import smtplib
-import ssl
 import asyncio
 import functools
 
@@ -50,10 +49,10 @@ class Client:
 
         text = message.as_string()
 
-        context = ssl.create_default_context()
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-            server.login(sender_email, password)
-            server.sendmail(sender_email, receiver, text)
+        server = smtplib.SMTP(host="smtp.gmail.com", port=587)
+        server.starttls()
+        server.login(sender_email, password)
+        server.sendmail(sender_email, receiver, text)
 
         async def send_async(self, receiver, body, subject="No subject", bcc=None, attachment_bytes=None, attachment_name=None):
             loop = asyncio.get_event_loop()
